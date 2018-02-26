@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>   
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    </head>
+
+    <body style="background-color: #ADD8E6">    
+        <div class="example3">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="ubuntufont">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <!--<a class="navbar-brand"><?php echo anchor('', img(base_url()."images/LogoMain.png"));?>></a>-->
+                        </div>
+                        <div id="navbar3" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                {% if user.is_authenticated %}
+                                    <li class=""><a href="/">Home</a></li>
+                                    <li><a href="/aboutus">About Us</a></li>
+                                    <li><a href="/services">Services</a></li>
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/contactus">Contact Us</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                      <!--/.nav-collapse -->
+                    </div>
+                </div>
+            <!--/.container-fluid -->
+                <div class="ubuntufont">
+                    {% if user.is_authenticated %}
+                        <div align="left" style="background-color:#ABD8C6">Welcome {{ user.username }}| <a href="/logout">Logout</a></div>
+                    {% endif %}
+                </div>
+            </nav>
+        </div>
+        {% block content1 %}
+
+        {% endblock %}
+
+        <footer id="myFooter">
+                <div class="social-networks">
+                    <a href="/test1" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="/test2" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="/test3" class="google"><i class="fa fa-google-plus"></i></a>
+                </div>
+
+                <div class="footer-copyright">
+                    <p>&copy 2018 Copyright Students Portal</p>
+                </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

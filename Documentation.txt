@@ -1,0 +1,6 @@
+Hallo all..!!
+
+This is a sample Login app to enable students log in into a platform and read PDF files (books).
+I have used a mysql database named mysite which is also among the uploaded files.
+
+Any ideas on improvements are highly welcome.

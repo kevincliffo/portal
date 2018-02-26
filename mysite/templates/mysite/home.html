@@ -1,0 +1,35 @@
+{% extends "mysite/base.html" %}
+{% load staticfiles %}
+
+{% block content1 %}
+        <div style="background-color: white" class="content">
+            {% if user.is_authenticated %}
+                <center><h1>Members Platform</h1></center>
+                <h3>Most Read Books</h3>
+                {% for file in pdffiles %}
+                    <a href="/static/pdffiles/{{ file }}" target="_blank">{{ file }}</a><br>
+                {% endfor %}
+                
+                <CENTER><H2>Mission and Vision</H2></CENTER>
+                <div id="mission_vision">
+                    <div class="list-group">
+                        <TEXT class="list-group-item">
+                            <h4 style="color: blue" class="list-group-item-heading"><B>Our Mission and Vision</B></h4>
+                            <p class="list-group-item-text">
+                                Ensure Students easily access books and other reading materials.
+                            </p>
+                            <p class="list-group-item-text">
+                                Reduce costs of college and University tuition fees.              
+                            </p>
+                        </TEXT>
+                    </div>
+                </div>
+            {% else %}
+                <p><a href="/login">Login</a></p>
+                <p><a href="/register">Signup</a></p>
+            {% endif %}
+
+            
+
+        </div>
+{% endblock %}

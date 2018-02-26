@@ -1,0 +1,292 @@
+@font-face
+{
+    font-family: ubuntuMain;
+    src: url(../fonts/ubuntu/Ubuntu-L.ttf) format('truetype'); 
+}
+@font-face
+{
+    font-family: hankenfont;
+    src: url(../fonts/Hanken-Book.ttf) format('truetype'); 
+}
+.ubuntufont{
+    font-family: ubuntuMain;
+}
+div {
+    display: block;
+}
+#container
+{
+    width:100%;
+}
+#top {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-size: 18px;
+    float:left;
+    width: 100.4%;
+    height: 15%;
+    background: #3bced7e0;
+}
+#pageheader{
+    color:#3bced7e0; 
+    font-size: 10%;
+    text-align: center;
+}
+#main_body
+{
+    font-family: ubuntuMain;
+    height: 80%;
+    padding-bottom:30px;
+}
+#footer {
+    font-family: ubuntuMain;
+    bottom: 15%;
+    left: 0pt;
+    width: 100%;
+    height: 30px;
+    border:1px;
+    background: b5b5a1ff;
+    position: fixed;
+    background-attachment: scroll;
+}
+#headerline{
+    float:left;
+    width: 100.4%;
+    height: 2%;
+    background: black; 
+}
+#rowline{
+    float:left;
+    width: 100%;
+    height: 2%;
+    background: #3737C8; 
+}
+#pages {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top:13%;
+    float:right;
+}
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;    
+     -webkit-flex-direction: column;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    font-family: ubuntuMain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;    
+}
+#left {
+    float:left;
+    width: 20%;
+    height: 100%;
+    background: #1A95E8;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-size: 12px;
+}
+#services
+{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+#aboutus
+{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background-image: url("images/back2.jpg");
+    background-attachment: fixed;
+    background-position: center;     
+}
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#quotation
+{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+a:link{
+    text-decoration:none;
+}
+#top_navigation {
+ /* Repeating background image */
+    background: #799ACC;
+    width:210px;
+    margin:20 0 0 0px;
+    font-family: 'roboto', Tahoma, Arial, sans-serif;
+}
+#top_navigation ul{
+ /* Removes bullet points to all ULs*/
+    list-style:none;
+    margin:0;
+    padding:0; 
+}
+#top_navigation .first_level_ul  { 
+    position:relative;
+    z-index: 500; 
+}
+#top_navigation .first_level_ul  li,
+#top_navigation .first_level_ul  li .second_level_ul li,
+#top_navigation .first_level_ul  li .second_level_ul li, .third_level_ul li
+{ 
+  min-height: 0.05em;
+  line-height: 1em;
+  vertical-align: middle;
+  position: relative;
+  background: #799ACC;
+} 
+#top_navigation a {
+    color:#fff;
+    padding:12px 0px; 
+    display:block; 
+    text-decoration:none; 
+    transition:background 1s;
+    -moz-transition:background 1s;
+    -webkit-transition:background 1s;
+    -o-transition:background 1s;
+    font-family:tahoma;
+    font-size:13px;
+    text-transform:uppercase;
+    padding-left:20px;
+}
+#top_navigation a:hover { 
+    background: coral;
+    color:#fff;
+} 
+#top_navigation .first_level_ul li:hover .second_level_ul{
+    /* When list item is hovered, display UL nested within. */
+    display:block; 
+}
+#top_navigation .first_level_ul li .second_level_ul li:hover .third_level_ul{
+    /* RM When list item is hovered, display UL nested within. */
+    display:block;
+}
+#top_navigation .first_level_ul .second_level_ul {
+    /* Remove element from document flow */
+    position:absolute;
+    /* Position relative to its parent &lt;li&gt; */
+    left:210px;
+    top:0;
+    border-top:1px solid #e9e9e9;
+    display:none;
+}
+#top_navigation .first_level_ul .second_level_ul .third_level_ul {
+    /* RM Remove element from document flow */
+    position:absolute;
+    /* Position relative to its parent &lt;li&gt; */
+    left:200px;
+    top:0;
+    border-top:1px solid #e9e9e9;
+    display:none;
+    list-style:none;
+}
+#top_navigation .first_level_ul li .second_level_ul li {
+    width:200px;
+    background:#799ACC;
+    border:0px solid #e9e9e9;
+    border-top:0; 
+}
+#top_navigation .first_level_ul li:hover a {
+    color:#86FC81; /* #5DDB78;*/
+    font-size:12px;
+    text-transform:none;
+}
+#top_navigation .first_level_ul li .second_level_ul li .third_level_ul li
+{
+    color:#aaa;
+    background:#799ACC;
+    font-size:12px;
+    text-transform:none; 
+}
+#top_navigation .first_level_ul .second_level_ul li a {/*RM*/
+    color:#fff;
+    font-size:12px;
+    text-transform:none;
+}
+#top_navigation .first_level_ul .second_level_ul  li a:hover {
+    color:#86FC81; /* #5DDB78; #929292;*/
+}
+#top_navigation .first_level_ul .second_level_ul .third_level_ul li a:hover {
+    color:#86FC81; /* #5DDB78; #929292;*/
+}
+#top_navigation span {
+    width:12px;
+    height:12px;
+    background:#fff;
+    display:inline-block;
+    float:left;
+    margin-top:3px;
+    margin-right:20px;
+    position:relative;
+    transition:all 0.5s;
+    -moz-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+#top_navigation a:hover span {
+    background: #7d2c41;
+    transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+/*Horizontal line*/
+ #top_navigation span:before {
+    content:"";
+    width:12px;
+    height:2px;
+    background:#3a3b3b;
+    position:absolute;
+    left:0px;
+    top:5px;
+ }
+ /*Vertical line*/
+ #top_navigation span:after {
+    content:"";
+    width:2px;
+    height:12px;
+    background:#3a3b3b;
+    position:absolute;
+    left:5px;
+    position:top;
+ }
+ 
+ @media print {
+    a{
+        display: none;
+    }
+  body * {
+    visibility: hidden;
+  }
+  #printablearea, #printablearea * {
+    visibility: visible;
+  }
+  #printablearea {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
